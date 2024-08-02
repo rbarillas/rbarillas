@@ -1,40 +1,39 @@
-```mermaid
 flowchart TD
     %% Start and End Nodes
     Start([Inicio del Proceso])
     End([Fin del Proceso])
 
     %% Identificación del Conflicto
-    Start --> A[Identificación del Conflicto \n (Art. 1, 8, 9)]
-    A --> B{¿Tipo de Conflicto? \n (Art. 1, 8)}
-    B -->|Conflicto: Tribunal vs. Administración Pública| C[Planteamiento del Conflicto \n (Art. 8, 9)]
+    Start --> A[Identificación del Conflicto<br>(Art. 1, 8, 9)]
+    A --> B{¿Tipo de Conflicto?<br>(Art. 1, 8)}
+    B -->|Conflicto: Tribunal vs. Administración Pública| C[Planteamiento del Conflicto<br>(Art. 8, 9)]
     B -->|Conflicto: Tribunal vs. Tribunales Ordinarios| C
     B -->|Conflicto: Administración Pública vs. Tribunales Ordinarios| C
 
     %% Planteamiento del Conflicto
-    C --> D[Envío de Solicitud al Tribunal \n Plazo: 5 días \n (Art. 9)]
-    D --> E[Recepción de Documentos \n Plazo: 48 horas \n (Art. 10)]
-    E --> F{¿Documentación Completa? \n (Art. 10)}
-    F -->|Sí| G[Evaluación de Documentos \n (Art. 10)]
-    F -->|No| H[Requerir Documentación Adicional \n Plazo: 48 horas \n (Art. 10)]
+    C --> D[Envío de Solicitud al Tribunal<br>Plazo: 5 días<br>(Art. 9)]
+    D --> E[Recepción de Documentos<br>Plazo: 48 horas<br>(Art. 10)]
+    E --> F{¿Documentación Completa?<br>(Art. 10)}
+    F -->|Sí| G[Evaluación de Documentos<br>(Art. 10)]
+    F -->|No| H[Requerir Documentación Adicional<br>Plazo: 48 horas<br>(Art. 10)]
     H --> D %% Loop back if additional documents are required
 
     %% Evaluación y Decisión del Tribunal
-    G --> I[Integración del Tribunal \n (Art. 2)]
-    I --> J[Evaluación del Conflicto \n (Art. 11)]
-    J --> K{Decisión sobre Competencia \n (Art. 11, 13)}
-    K -->|Competencia: Administración Pública| L[Asignar a Administración Pública \n (Art. 11, 13)]
-    K -->|Competencia: Tribunales Ordinarios| M[Asignar a Tribunales Ordinarios \n (Art. 11, 13)]
-    K -->|Competencia: Tribunal de lo Contencioso| N[Asignar a Tribunal Contencioso \n (Art. 11, 13)]
+    G --> I[Integración del Tribunal<br>(Art. 2)]
+    I --> J[Evaluación del Conflicto<br>(Art. 11)]
+    J --> K{Decisión sobre Competencia<br>(Art. 11, 13)}
+    K -->|Competencia: Administración Pública| L[Asignar a Administración Pública<br>(Art. 11, 13)]
+    K -->|Competencia: Tribunales Ordinarios| M[Asignar a Tribunales Ordinarios<br>(Art. 11, 13)]
+    K -->|Competencia: Tribunal de lo Contencioso| N[Asignar a Tribunal Contencioso<br>(Art. 11, 13)]
 
     %% Notificación y Registro
-    L --> O[Notificación de Decisión a Partes \n (Art. 14)]
+    L --> O[Notificación de Decisión a Partes<br>(Art. 14)]
     M --> O
     N --> O
-    O --> P{¿Todas las Partes Notificadas? \n (Art. 14)}
-    P -->|Sí| Q[Registrar Resolución \n (Art. 15)]
+    O --> P{¿Todas las Partes Notificadas?<br>(Art. 14)}
+    P -->|Sí| Q[Registrar Resolución<br>(Art. 15)]
     P -->|No| O
-    Q --> R[Control de Dietas para Magistrados \n (Art. 15)]
+    Q --> R[Control de Dietas para Magistrados<br>(Art. 15)]
     R --> End
 
     %% Styling for clarity
